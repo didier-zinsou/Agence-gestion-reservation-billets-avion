@@ -1,0 +1,69 @@
+Votre choix : 6
+
+--- Enregistrement d'un paiement ---
+Identifiant de la réservation (ex. R001) : R002
+
+  Réservation R002
+  Statut        : En attente
+  Réservée le   : 13/11/2026 10:56
+  Passager      : P002 - AGBODJAN Kévin (passeport BJ7654321)
+  Vol           : BJ202 - Cotonou -> Abidjan, le 18/11/2026 à 14:15
+  Prix du billet: 120 000 FCFA
+  Paiement      : aucun
+
+Mode de paiement :
+  1- Espèces
+  2- Mobile Money
+  3- Carte bancaire
+Mode : 2
+Montant à payer : 120 000 FCFA
+Montant versé (FCFA) : 100000
+
+  Paiement refusé : Montant incorrect : la somme à payer est exactement 120 000 FCFA.
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 6
+
+--- Enregistrement d'un paiement ---
+Identifiant de la réservation (ex. R001) : R002
+
+  Réservation R002
+  Statut        : En attente
+  Réservée le   : 13/11/2026 10:56
+  Passager      : P002 - AGBODJAN Kévin (passeport BJ7654321)
+  Vol           : BJ202 - Cotonou -> Abidjan, le 18/11/2026 à 14:15
+  Prix du billet: 120 000 FCFA
+  Paiement      : aucun
+
+Mode de paiement :
+  1- Espèces
+  2- Mobile Money
+  3- Carte bancaire
+Mode : 2
+Montant à payer : 120 000 FCFA
+Montant versé (FCFA) : 120000
+
+  Paiement enregistré. La réservation R002 est validée : la place est définitivement réservée.
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 9
+
+--- Informations d'une réservation ---
+Identifiant de la réservation (ex. R001) : R002
+
+  Réservation R002
+  Statut        : Validée
+  Réservée le   : 13/11/2026 10:56
+  Passager      : P002 - AGBODJAN Kévin (passeport BJ7654321)
+  Vol           : BJ202 - Cotonou -> Abidjan, le 18/11/2026 à 14:15
+  Prix du billet: 120 000 FCFA
+  Paiement      : PAY002 - 120 000 FCFA (Mobile Money) le 13/11/2026 10:56
+  Remboursement : Aucun
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 10
+
+Merci d'avoir utilisé l'application. Au revoir !

@@ -1,0 +1,80 @@
+Votre choix : 5
+
+--- Nouvelle réservation ---
+Passagers enregistrés :
+  ID     Nom et prénom             Téléphone        Passeport   E-mail
+  --------------------------------------------------------------------------------------
+  P001   DOSSOU Marie              +229 97 12 34 56 BJ1234567   marie.dossou@exemple.com
+  P002   AGBODJAN Kévin            +229 96 65 43 21 BJ7654321   kevin.agbodjan@exemple.com
+  P003   HOUNGBO Sarah             +229 95 11 22 33 BJ2468135   sarah.houngbo@exemple.com
+
+Identifiant du passager (ex. P001) : P999
+
+Vols disponibles :
+  N° vol   Départ         Arrivée        Date        Heure  Prix           Places libres
+  --------------------------------------------------------------------------------------
+  BJ101    Cotonou        Paris          20/12/2026  08:30  350 000 FCFA   2/3
+  BJ202    Cotonou        Abidjan        18/11/2026  14:15  120 000 FCFA   2/2
+  BJ303    Cotonou        Ouagadougou    25/11/2026  10:00  95 000 FCFA    50/50
+
+Numéro du vol : BJ202
+
+  Réservation refusée : Passager introuvable : il doit d'abord être enregistré (menu 1).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 5
+
+--- Nouvelle réservation ---
+Passagers enregistrés :
+  ID     Nom et prénom             Téléphone        Passeport   E-mail
+  --------------------------------------------------------------------------------------
+  P001   DOSSOU Marie              +229 97 12 34 56 BJ1234567   marie.dossou@exemple.com
+  P002   AGBODJAN Kévin            +229 96 65 43 21 BJ7654321   kevin.agbodjan@exemple.com
+  P003   HOUNGBO Sarah             +229 95 11 22 33 BJ2468135   sarah.houngbo@exemple.com
+
+Identifiant du passager (ex. P001) : P002
+
+Vols disponibles :
+  N° vol   Départ         Arrivée        Date        Heure  Prix           Places libres
+  --------------------------------------------------------------------------------------
+  BJ101    Cotonou        Paris          20/12/2026  08:30  350 000 FCFA   2/3
+  BJ202    Cotonou        Abidjan        18/11/2026  14:15  120 000 FCFA   2/2
+  BJ303    Cotonou        Ouagadougou    25/11/2026  10:00  95 000 FCFA    50/50
+
+Numéro du vol : BJ202
+
+  Réservation R002 créée (statut : En attente).
+  Montant à payer : 120 000 FCFA
+  La place ne sera définitive qu'après le paiement (menu 6).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 5
+
+--- Nouvelle réservation ---
+Passagers enregistrés :
+  ID     Nom et prénom             Téléphone        Passeport   E-mail
+  --------------------------------------------------------------------------------------
+  P001   DOSSOU Marie              +229 97 12 34 56 BJ1234567   marie.dossou@exemple.com
+  P002   AGBODJAN Kévin            +229 96 65 43 21 BJ7654321   kevin.agbodjan@exemple.com
+  P003   HOUNGBO Sarah             +229 95 11 22 33 BJ2468135   sarah.houngbo@exemple.com
+
+Identifiant du passager (ex. P001) : P002
+
+Vols disponibles :
+  N° vol   Départ         Arrivée        Date        Heure  Prix           Places libres
+  --------------------------------------------------------------------------------------
+  BJ101    Cotonou        Paris          20/12/2026  08:30  350 000 FCFA   2/3
+  BJ202    Cotonou        Abidjan        18/11/2026  14:15  120 000 FCFA   1/2
+  BJ303    Cotonou        Ouagadougou    25/11/2026  10:00  95 000 FCFA    50/50
+
+Numéro du vol : BJ202
+
+  Réservation refusée : Ce passager a déjà une réservation (R002) sur le vol BJ202.
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 10
+
+Merci d'avoir utilisé l'application. Au revoir !

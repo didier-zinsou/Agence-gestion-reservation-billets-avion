@@ -1,0 +1,52 @@
+Votre choix : 7
+
+--- Annulation d'une réservation ---
+Identifiant de la réservation (ex. R001) : R001
+
+  Réservation R001
+  Statut        : Validée
+  Réservée le   : 13/11/2026 10:56
+  Passager      : P001 - DOSSOU Marie (passeport BJ1234567)
+  Vol           : BJ101 - Cotonou -> Paris, le 20/12/2026 à 08:30
+  Prix du billet: 350 000 FCFA
+  Paiement      : PAY001 - 350 000 FCFA (Mobile Money) le 13/11/2026 10:56
+  Remboursement : Aucun
+
+Confirmer l'annulation (o/n) : o
+
+  Réservation annulée. Remboursement de 280 000 FCFA (80 % du montant payé ; frais d'annulation retenus : 70 000 FCFA).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 6
+
+--- Enregistrement d'un paiement ---
+Identifiant de la réservation (ex. R001) : R001
+
+  Paiement impossible : Cette réservation est annulée : elle ne peut plus être payée.
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 7
+
+--- Annulation d'une réservation ---
+Identifiant de la réservation (ex. R001) : R001
+
+  Cette réservation est déjà annulée.
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 8
+
+--- Liste des réservations ---
+  ID     Passager                Vol     Trajet                    Statut      Payée
+  --------------------------------------------------------------------------------------
+  R001   DOSSOU Marie            BJ101   Cotonou -> Paris          Annulée     Oui
+
+  Total : 1 réservation(s) - 0 en attente, 0 validée(s), 1 annulée(s).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 10
+
+Merci d'avoir utilisé l'application. Au revoir !

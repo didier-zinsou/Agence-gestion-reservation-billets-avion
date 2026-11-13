@@ -1,0 +1,51 @@
+==================================================
+   Agence de voyage de Cotonou
+==================================================
+   1- Enregistrer un passager
+   2- Ajouter un vol
+   3- Afficher les vols disponibles
+   4- Rechercher un vol
+   5- Effectuer une réservation
+   6- Enregistrer un paiement
+   7- Annuler une réservation
+   8- Consulter les réservations
+   9- Afficher les infos d'une réservation
+  10- Quitter
+--------------------------------------------------
+Votre choix : abc
+  Saisie invalide : entrez un entier entre 1 et 10.
+Votre choix : 11
+  Saisie invalide : entrez un entier entre 1 et 10.
+Votre choix : 1
+
+--- Enregistrement d'un passager ---
+Nom : DOSSOU
+Prénom : Marie
+Téléphone : abc
+  Numéro invalide : 8 à 15 chiffres (les signes +, - et espaces sont permis).
+Téléphone : +229 97 12 34 56
+E-mail : marie
+  Adresse e-mail invalide (exemple : nom@exemple.com).
+E-mail : marie.dossou@exemple.com
+Numéro de passeport : bj1234567
+
+  Passager enregistré avec succès. Identifiant : P001
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 1
+
+--- Enregistrement d'un passager ---
+Nom : AGBODJAN
+Prénom : Kévin
+Téléphone : +229 96 65 43 21
+E-mail : kevin.agbodjan@exemple.com
+Numéro de passeport : BJ1234567
+
+  Échec : Ce numéro de passeport est déjà enregistré (passager P001).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 10
+
+Merci d'avoir utilisé l'application. Au revoir !

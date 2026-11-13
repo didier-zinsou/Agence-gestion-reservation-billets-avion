@@ -1,0 +1,246 @@
+@startuml diagramme_classes
+title Agence de voyage de Cotonou - Diagramme de classes
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam classFontSize 13
+skinparam noteBackgroundColor #FFF8DC
+skinparam noteBorderColor #B8A04A
+hide empty members
+
+' =====================================================
+'  ENUMERATIONS
+' =====================================================
+enum StatutReservation {
+  EN_ATTENTE
+  VALIDEE
+  ANNULEE
+}
+
+enum ModePaiement {
+  ESPECES
+  MOBILE_MONEY
+  CARTE_BANCAIRE
+}
+
+enum StatutRemboursement {
+  AUCUN
+  REMBOURSE
+}
+
+enum CritereRecherche {
+  NUMERO
+  DEPART
+  ARRIVEE
+  DATE
+}
+
+' =====================================================
+'  CLASSES METIER
+' =====================================================
+class Passager {
+  - {static} compteur : int
+  - id : string
+  - nom : string
+  - prenom : string
+  - telephone : string
+  - email : string
+  - numeroPasseport : string
+  --
+  + Passager(nom : string, prenom : string, telephone : string,\n             email : string, numeroPasseport : string)
+  + ~Passager()
+  + getId() : string
+  + getNom() : string
+  + getPrenom() : string
+  + getTelephone() : string
+  + getEmail() : string
+  + getNumeroPasseport() : string
+  + nomComplet() : string
+  + {static} afficherEntete() : void
+  + afficherLigne() : void
+}
+
+class Vol {
+  - numero : string
+  - villeDepart : string
+  - villeArrivee : string
+  - date : string
+  - heure : string
+  - capacite : int
+  - placesProvisoires : int
+  - placesConfirmees : int
+  - prix : double
+  --
+  + Vol(numero : string, villeDepart : string, villeArrivee : string,\n        date : string, heure : string, capacite : int, prix : double)
+  + ~Vol()
+  + getNumero() : string
+  + getVilleDepart() : string
+  + getVilleArrivee() : string
+  + getDate() : string
+  + getHeure() : string
+  + getCapacite() : int
+  + getPrix() : double
+  + placesOccupees() : int
+  + placesDisponibles() : int
+  + estComplet() : bool
+  + reserverProvisoirement() : bool
+  + confirmerPlace() : void
+  + libererPlace(etaitConfirmee : bool) : void
+  + afficher() : void
+  + {static} afficherEntete() : void
+  + afficherLigne() : void
+}
+
+class Reservation {
+  - {static} compteur : int
+  - {static} TAUX_REMBOURSEMENT : double = 0.80
+  - id : string
+  - dateReservation : string
+  - dateAnnulation : string
+  - statut : StatutReservation
+  - passager : Passager*
+  - vol : Vol*
+  - paiement : Paiement*
+  --
+  + Reservation(passager : Passager*, vol : Vol*)
+  + ~Reservation()
+  + getId() : string
+  + getPassager() : Passager*
+  + getVol() : Vol*
+  + getPaiement() : Paiement*
+  + getStatut() : StatutReservation
+  + estActive() : bool
+  + estPayee() : bool
+  + montantDu() : double
+  + peutEtrePayee(raison : string&) : bool
+  + payer(montant : double, mode : ModePaiement,\n          erreur : string&) : bool
+  + annuler(message : string&) : bool
+  + afficherDetails() : void
+  + {static} afficherEntete() : void
+  + afficherLigne() : void
+}
+
+class Paiement {
+  - {static} compteur : int
+  - id : string
+  - montant : double
+  - mode : ModePaiement
+  - datePaiement : string
+  - statutRemboursement : StatutRemboursement
+  - montantRembourse : double
+  --
+  + Paiement(montant : double, mode : ModePaiement)
+  + ~Paiement()
+  + getId() : string
+  + getMontant() : double
+  + getMode() : ModePaiement
+  + getDatePaiement() : string
+  + getStatutRemboursement() : StatutRemboursement
+  + getMontantRembourse() : double
+  + rembourser(taux : double) : void
+  + afficher() : void
+}
+
+' =====================================================
+'  CLASSE DE GESTION
+' =====================================================
+class Agence {
+  - nom : string
+  - passagers : vector<Passager*>
+  - vols : vector<Vol*>
+  - reservations : vector<Reservation*>
+  --
+  + Agence(nom : string)
+  + ~Agence()
+  + enregistrerPassager(nom : string, prenom : string, telephone : string,\n                        email : string, passeport : string,\n                        erreur : string&) : Passager*
+  + ajouterVol(numero : string, depart : string, arrivee : string,\n               date : string, heure : string, capacite : int,\n               prix : double, erreur : string&) : Vol*
+  + trouverPassager(id : string) : Passager*
+  + trouverVol(numero : string) : Vol*
+  + trouverReservation(id : string) : Reservation*
+  + volsDisponibles() : vector<Vol*>
+  + rechercherVols(critere : CritereRecherche, texte : string) : vector<Vol*>
+  + reserver(idPassager : string, numeroVol : string,\n             erreur : string&) : Reservation*
+  + enregistrerPaiement(idReservation : string, montant : double,\n                        mode : ModePaiement, erreur : string&) : bool
+  + annulerReservation(idReservation : string, message : string&) : bool
+  + getPassagers() : vector<Passager*>
+  + getVols() : vector<Vol*>
+  + getReservations() : vector<Reservation*>
+}
+
+' =====================================================
+'  INTERFACE CONSOLE
+' =====================================================
+class Application {
+  - agence : Agence
+  --
+  + Application()
+  + lancer() : void
+  + chargerDonneesDemo() : void
+  - afficherMenu() : void
+  - enregistrerPassager() : void
+  - ajouterVol() : void
+  - afficherVolsDisponibles() : void
+  - rechercherVol() : void
+  - effectuerReservation() : void
+  - enregistrerPaiement() : void
+  - annulerReservation() : void
+  - consulterReservations() : void
+  - afficherInfosReservation() : void
+}
+
+class Utils <<namespace>> {
+  + lireTexte(invite : string) : string
+  + lireEntier(invite : string, min : int, max : int) : int
+  + lireReel(invite : string, min : double) : double
+  + lireDate(invite : string) : string
+  + lireHeure(invite : string) : string
+  + lireTelephone(invite : string) : string
+  + lireEmail(invite : string) : string
+  + confirmer(invite : string) : bool
+  + maintenant() : string
+  + formaterMontant(montant : double) : string
+}
+
+' =====================================================
+'  ASSOCIATIONS ET MULTIPLICITES
+' =====================================================
+Application "1" *-- "1" Agence : possède >
+
+Agence "1" o-- "0..*" Passager : enregistre >
+Agence "1" o-- "0..*" Vol : propose >
+Agence "1" *-- "0..*" Reservation : gère >
+
+Reservation "0..*" --> "1" Passager : est effectuée par >
+Reservation "0..*" --> "1" Vol : porte sur >
+Reservation "1" *-- "0..1" Paiement : est réglée par >
+
+Reservation ..> StatutReservation
+Paiement ..> ModePaiement
+Paiement ..> StatutRemboursement
+Agence ..> CritereRecherche
+Application ..> Utils : utilise
+
+' =====================================================
+'  REGLES DE GESTION
+' =====================================================
+note right of Agence
+  **Règles appliquées dans Agence::reserver**
+  R1 : le passager doit être enregistré
+  R2 : réservation refusée si le vol est complet
+  R3 : un passager ne peut pas réserver deux fois
+       le même vol (réservation non annulée)
+  R4 : une réservation = 1 passager + 1 vol
+end note
+
+note bottom of Reservation
+  **Règles appliquées dans Reservation**
+  R5 : payer() / peutEtrePayee() refusent
+       si statut = ANNULEE
+  R6 : payer() fait passer le statut à VALIDEE :
+       la place devient définitive (Vol::confirmerPlace)
+  R7 : annuler() un billet payé déclenche
+       Paiement::rembourser (80 % remboursés,
+       statut = REMBOURSE)
+end note
+
+@enduml

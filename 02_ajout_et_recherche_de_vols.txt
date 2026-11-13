@@ -1,0 +1,75 @@
+Votre choix : 2
+
+--- Ajout d'un vol ---
+Numéro du vol (ex. BJ101) : BJ101
+Ville de départ : Cotonou
+Ville d'arrivée : Paris
+Date de départ (JJ/MM/AAAA) : 31/02/2026
+  Date invalide : utilisez le format JJ/MM/AAAA (ex. 15/12/2026).
+Date de départ (JJ/MM/AAAA) : 20/12/2026
+Heure de départ (HH:MM) : 8h30
+  Heure invalide : utilisez le format HH:MM (ex. 08:30).
+Heure de départ (HH:MM) : 08:30
+Capacité (nombre de places) : 3
+Prix du billet (FCFA) : 350000
+
+  Vol ajouté avec succès :
+  Vol BJ101 : Cotonou -> Paris
+    Départ : 20/12/2026 à 08:30
+    Prix   : 350 000 FCFA
+    Places : 0 confirmée(s), 0 en attente, 3 libre(s) sur 3
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 2
+
+--- Ajout d'un vol ---
+Numéro du vol (ex. BJ101) : BJ202
+Ville de départ : Cotonou
+Ville d'arrivée : Abidjan
+Date de départ (JJ/MM/AAAA) : 18/11/2026
+Heure de départ (HH:MM) : 14:15
+Capacité (nombre de places) : 2
+Prix du billet (FCFA) : 120000
+
+  Vol ajouté avec succès :
+  Vol BJ202 : Cotonou -> Abidjan
+    Départ : 18/11/2026 à 14:15
+    Prix   : 120 000 FCFA
+    Places : 0 confirmée(s), 0 en attente, 2 libre(s) sur 2
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 3
+
+--- Vols disponibles ---
+  N° vol   Départ         Arrivée        Date        Heure  Prix           Places libres
+  --------------------------------------------------------------------------------------
+  BJ101    Cotonou        Paris          20/12/2026  08:30  350 000 FCFA   3/3
+  BJ202    Cotonou        Abidjan        18/11/2026  14:15  120 000 FCFA   2/2
+
+  2 vol(s) disponible(s).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 4
+
+--- Recherche d'un vol ---
+  1- Par numéro de vol
+  2- Par ville de départ
+  3- Par ville d'arrivée
+  4- Par date
+Critère : 3
+Ville d'arrivée : abidjan
+
+  N° vol   Départ         Arrivée        Date        Heure  Prix           Places libres
+  --------------------------------------------------------------------------------------
+  BJ202    Cotonou        Abidjan        18/11/2026  14:15  120 000 FCFA   2/2
+
+  1 vol(s) trouvé(s).
+
+Appuyez sur Entrée pour continuer...
+
+Votre choix : 10
+
+Merci d'avoir utilisé l'application. Au revoir !
