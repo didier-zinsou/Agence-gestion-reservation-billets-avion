@@ -1,5 +1,5 @@
 # Agence-gestion-reservation-billets-avion
-projet de conception et de développement d'une application console permettant de de gérer quelques opérations
+projet de conception et de développement d'une application console permettant de gérer quelques opérations
 # Gestion des vols et des réservations - Agence de Cotonou
 
 Application **console en C++17** qui informatise la gestion des vols et des réservations de billets d'avion d'une agence située à Cotonou : passagers, vols, réservations, paiements et annulations.
